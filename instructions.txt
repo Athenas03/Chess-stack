@@ -1,0 +1,65 @@
+
+----Chess Program----
+
+
+Language Syntax Guide
+
+1. Classes:
+   - King: Represents an integer value with stack operations.
+   - Queen: Represents a floating-point value with stack operations.
+   - Pawn: Represents a character value with stack operations.
+   - Bishop: Represents a string value with stack operations.
+
+2. Operators (Defined within each class):
+   - Arithmetic Operators:
+     - Addition (+), Subtraction (-), Multiplication (*), Division (/)
+       Supported for King, Queen, and Pawn classes.
+
+   - Logical Operators:
+     - Logical AND (&&), Logical OR (||), Logical NOT (!)
+       Supported for King, Queen, Pawn classes.
+
+3. CPU Class (Template):
+   - Responsible for arithmetic operations (add, subtract, multiply, divide).
+   - Template supports different data types (int, float, char, string).
+
+4. Template Classes:
+   - Register<T>: Holds a value of type T.
+   - Cpu<T>: Handles CPU operations for arithmetic and logical operations.
+
+5. Input and Output Operators:
+   - Output<T>: Provides custom output functionality for T type objects.
+   - Input<T>: Provides custom input functionality for T type objects.
+
+6. Example Usage:
+   - King a = 5;
+   - King b = 6;
+   - King c;
+   - King k;
+
+   - c = a + b; // Performs addition using overloaded operator+.
+   - std::cout << "Result of addition: " << c.value << std::endl;
+
+   - yourMove yourmove;
+   - checkMate checkmate;
+
+   - yourmove && "\nMoving King to A" && c.value; // Custom output using operator&&.
+
+   - yourmove && "\nEnter integer to move King to ";
+   - checkmate || k; // Custom input using operator||.
+   - yourmove && "\nA " && k.value;
+
+7. Additional Notes:
+   - Each class (King, Queen, Pawn, Bishop) implements stack operations with overloaded operators.
+   - CPU operations are specialized through the Cpu<T> class using templates for different data types.
+   - Operators.h defines custom input and output operators for generic types, enhancing interaction in main programs.
+
+8. File Structure:
+   - language.h: Defines classes King, Queen, Pawn, Bishop and includes CPU operations.
+   - cpu.h: Defines CPU operations and template classes Register<T> and Cpu<T>.
+   - operators.h: Defines custom input and output operators for generic types.
+
+9. Dependencies:
+   - Uses C++ standard library components like stack, iostream for input/output operations.
+   - Integration with operators.h for streamlined input and output handling in main programs.
+
